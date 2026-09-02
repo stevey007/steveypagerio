@@ -1,0 +1,105 @@
+:root {
+  --bg: #0b0b0b;
+  --fg: #f4f1ea;
+  --muted: #a7a29a;
+  --line: #2a2a2a;
+  --accent: #e8e2d6;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 6vw;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(11,11,11,.92);
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-weight: 700;
+  letter-spacing: .08em;
+  font-size: .85rem;
+}
+nav { display: flex; gap: 1.5rem; font-size: .95rem; }
+nav a:hover { text-decoration: underline; }
+
+.hero {
+  padding: 18vh 6vw 14vh;
+  max-width: 900px;
+}
+.eyebrow {
+  letter-spacing: .28em;
+  font-size: .75rem;
+  color: var(--muted);
+  margin: 0 0 .75rem;
+}
+h1 {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+.lede {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 28rem;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1.75rem;
+  border: 1px solid var(--accent);
+  padding: .7rem 1.2rem;
+  letter-spacing: .06em;
+  font-size: .85rem;
+}
+.btn:hover { background: var(--fg); color: var(--bg); }
+
+section { padding: 4rem 6vw; border-top: 1px solid var(--line); }
+h2 { margin: 0 0 1rem; font-weight: 500; }
+.note, .about p, .contact p { color: var(--muted); max-width: 36rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.card {
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+.mock {
+  height: 220px;
+  background:
+    linear-gradient(160deg, #1a1a1a, #111),
+    repeating-linear-gradient(90deg, transparent 0 18px, #1f1f1f 18px 19px);
+  margin-bottom: .9rem;
+}
+.card h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+footer {
+  padding: 2rem 6vw;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+@media (max-width: 640px) {
+  .nav { flex-direction: column; align-items: flex-start; gap: .75rem; }
+  .hero { padding-top: 10vh; }
+}
