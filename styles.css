@@ -13,8 +13,8 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  background: var(--bg);
-  color: var(--fg);
+  background: #07040e;
+  color: #f7f0e6;
   line-height: 1.5;
   position: relative;
   min-height: 100vh;
@@ -71,10 +71,7 @@ h1 {
   line-height: 1.05;
   margin: 0 0 1rem;
   font-weight: 500;
-  background: linear-gradient(105deg, #fff 20%, #ff8ac4 55%, #7ad8ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #ffe3f2;
 }
 .lede {
   color: var(--muted);
@@ -88,12 +85,12 @@ h1 {
   padding: .75rem 1.3rem;
   letter-spacing: .06em;
   font-size: .85rem;
-  background: linear-gradient(90deg, var(--accent), var(--dusk));
+  background: #ff4fa3;
   color: #fff;
   border-radius: 999px;
 }
 .btn:hover {
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  background: #3ec8ff;
   color: #081018;
 }
 
@@ -122,12 +119,15 @@ h2 { margin: 0 0 1rem; font-weight: 500; }
   overflow: hidden;
 }
 .mock-magenta {
+  background: #d12a7a;
   background: radial-gradient(circle at 30% 20%, #ff9ad0, #d12a7a 55%, #4a1028);
 }
 .mock-midnight {
+  background: #1a1560;
   background: radial-gradient(circle at 70% 10%, #5ad0ff, #2a1a6a 45%, #0b0718);
 }
 .mock-blue {
+  background: #1a6aa8;
   background: radial-gradient(circle at 40% 30%, #9ee7ff, #1a6aa8 50%, #082033);
 }
 .tee {
