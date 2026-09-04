@@ -9,16 +9,18 @@
   --olive: #6b6a3d;
   --charcoal: #2c2c2c;
   --ochre: #c9a15b;
+  --display: "Bebas Neue", Impact, sans-serif;
+  --body: "Libre Baskerville", Georgia, serif;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--body);
   background: var(--sand);
   color: var(--ink);
-  line-height: 1.5;
+  line-height: 1.6;
   min-height: 100vh;
 }
 
@@ -40,7 +42,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 6vw;
+  padding: 1.1rem 6vw;
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -49,13 +51,19 @@ a { color: inherit; text-decoration: none; }
   z-index: 10;
 }
 .logo {
-  font-weight: 700;
-  letter-spacing: .12em;
-  font-size: .82rem;
+  font-family: var(--display);
+  letter-spacing: .14em;
+  font-size: 1.35rem;
+  line-height: 1;
 }
 .logo:hover { color: var(--rust); }
-nav { display: flex; gap: 1.5rem; font-size: .95rem; }
-nav a { color: var(--muted); }
+nav { display: flex; gap: 1.5rem; }
+nav a {
+  font-family: var(--display);
+  letter-spacing: .12em;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
 nav a:hover { color: var(--rust-deep); }
 
 .hero {
@@ -63,31 +71,34 @@ nav a:hover { color: var(--rust-deep); }
   max-width: 920px;
 }
 .eyebrow {
-  letter-spacing: .28em;
-  font-size: .75rem;
+  font-family: var(--display);
+  letter-spacing: .32em;
+  font-size: 1rem;
   color: var(--rust);
-  margin: 0 0 .75rem;
+  margin: 0 0 .6rem;
 }
 h1 {
-  font-size: clamp(2.4rem, 7vw, 5rem);
-  line-height: 1.05;
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 10vw, 7rem);
+  line-height: .9;
   margin: 0 0 1rem;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: .02em;
   color: var(--ink);
 }
 .lede {
   color: var(--muted);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   max-width: 32rem;
 }
 .btn {
   display: inline-block;
   margin-top: 1.75rem;
   border: 0;
-  padding: .75rem 1.35rem;
-  letter-spacing: .08em;
-  font-size: .82rem;
-  text-transform: uppercase;
+  padding: .8rem 1.4rem .65rem;
+  font-family: var(--display);
+  letter-spacing: .16em;
+  font-size: 1.15rem;
   background: var(--rust);
   color: #f8edd8;
   border-radius: 2px;
@@ -98,7 +109,13 @@ h1 {
 }
 
 section { padding: 4rem 6vw; border-top: 1px solid var(--line); }
-h2 { margin: 0 0 1rem; font-weight: 500; }
+h2 {
+  font-family: var(--display);
+  font-size: 2.4rem;
+  letter-spacing: .06em;
+  margin: 0 0 1rem;
+  font-weight: 400;
+}
 .note, .about p, .contact p { color: var(--muted); max-width: 36rem; }
 
 .grid {
@@ -142,7 +159,13 @@ h2 { margin: 0 0 1rem; font-weight: 500; }
 }
 .tee::before { left: -18px; transform: rotate(-18deg); }
 .tee::after { right: -18px; transform: rotate(18deg); }
-.card h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.card h3 {
+  font-family: var(--display);
+  letter-spacing: .08em;
+  font-size: 1.45rem;
+  margin: 0 0 .15rem;
+  font-weight: 400;
+}
 .card p { margin: 0; color: var(--muted); font-size: .95rem; }
 
 footer {
