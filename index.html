@@ -4,24 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stevey Pagerio — T-Shirts</title>
-  <meta name="description" content="Stevey Pagerio t-shirts. Built from scratch." />
+  <meta name="description" content="Stevey Pagerio t-shirts. New designs from the outback." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Italiana&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260911type" />
-  <script>
-    (function () {
-      var allowed = ["fraunces", "bebas", "italiana", "cinzel"];
-      var saved = localStorage.getItem("pagerio-brand-font");
-      document.documentElement.dataset.brandFont = allowed.indexOf(saved) >= 0 ? saved : "fraunces";
-    })();
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260911bebas" />
 </head>
 <body>
   <div class="paper" aria-hidden="true"></div>
 
   <header class="nav">
-    <a class="logo brand-mark" href="/">Stevey Pagerio</a>
+    <a class="logo" href="/">STEVEY PAGERIO</a>
     <nav>
       <a href="#shirts">Shirts</a>
       <a href="#about">About</a>
@@ -32,8 +25,7 @@
   <main>
     <section class="hero">
       <p class="eyebrow">T-SHIRTS · NT</p>
-      <p class="hero-mark brand-mark">Stevey Pagerio</p>
-      <h1>New project.<br />Built from scratch.</h1>
+      <h1>New designs<br />from the outback.</h1>
       <p class="lede">Simple shirts. Clean designs. Colours from red dirt, olive scrub and late-afternoon sandstone.</p>
       <a class="btn" href="#shirts">See shirts</a>
     </section>
@@ -72,39 +64,7 @@
   </main>
 
   <footer>
-    <p class="footer-mark brand-mark">Stevey Pagerio</p>
     <p>© 2026 Stevey Pagerio</p>
-    <div class="type-lab" role="group" aria-label="Wordmark typeface">
-      <span class="type-lab__label">Wordmark</span>
-      <button type="button" data-font="fraunces">Fraunces</button>
-      <button type="button" data-font="bebas">Bebas</button>
-      <button type="button" data-font="italiana">Italiana</button>
-      <button type="button" data-font="cinzel">Cinzel</button>
-    </div>
   </footer>
-
-  <script>
-    (function () {
-      var key = "pagerio-brand-font";
-      var fonts = ["fraunces", "bebas", "italiana", "cinzel"];
-      var lab = document.querySelector(".type-lab");
-
-      function apply(name) {
-        if (fonts.indexOf(name) < 0) name = "fraunces";
-        document.documentElement.dataset.brandFont = name;
-        localStorage.setItem(key, name);
-        lab.querySelectorAll("[data-font]").forEach(function (btn) {
-          btn.setAttribute("aria-pressed", String(btn.getAttribute("data-font") === name));
-        });
-      }
-
-      apply(localStorage.getItem(key) || "fraunces");
-      lab.addEventListener("click", function (e) {
-        var btn = e.target.closest("[data-font]");
-        if (!btn) return;
-        apply(btn.getAttribute("data-font"));
-      });
-    })();
-  </script>
 </body>
 </html>
