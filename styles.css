@@ -158,6 +158,7 @@ h2 {
   margin-bottom: 0;
   background: var(--sand);
 }
+.product .gallery-wide img { aspect-ratio: 16 / 9; }
 .mock {
   height: 220px;
   margin-bottom: .9rem;
