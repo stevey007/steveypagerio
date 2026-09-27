@@ -197,6 +197,33 @@ h2 {
 }
 .card p { margin: 0; color: var(--muted); font-size: .95rem; }
 
+.shop-note { margin: 0 0 .5rem; max-width: 44rem; }
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card .sizes { margin-top: .35rem; font-size: .9rem; }
+.buy {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card .price {
+  font-family: var(--display);
+  font-size: 2rem;
+  letter-spacing: .06em;
+  line-height: 1;
+  color: var(--ink);
+}
+.btn-buy {
+  margin-top: 0;
+  min-width: 7.5rem;
+  text-align: center;
+}
+
 footer {
   padding: 2rem 6vw;
   border-top: 1px solid var(--line);
@@ -208,4 +235,7 @@ footer {
   .nav { flex-direction: column; align-items: flex-start; gap: .75rem; }
   .hero { padding-top: 10vh; }
   .gallery { grid-template-columns: 1fr; }
+  .product-info { flex-direction: column; align-items: stretch; }
+  .buy { justify-content: space-between; }
+  .btn-buy { flex: 1; max-width: 14rem; }
 }
