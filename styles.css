@@ -159,6 +159,7 @@ h2 {
   background: var(--sand);
 }
 .product .gallery-wide img { aspect-ratio: 16 / 9; }
+.gallery-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .mock {
   height: 220px;
   margin-bottom: .9rem;
@@ -238,4 +239,6 @@ footer {
   .product-info { flex-direction: column; align-items: stretch; }
   .buy { justify-content: space-between; }
   .btn-buy { flex: 1; max-width: 14rem; }
+  .gallery-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .gallery-3 figure:first-child { grid-column: 1 / -1; }
 }
